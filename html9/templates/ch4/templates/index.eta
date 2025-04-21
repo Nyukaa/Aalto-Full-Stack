@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Songs and durations!</title>
+  </head>
+  <body>
+    <h1>Songs</h1>
+    form method="POST" action="/addresses">
+      <label for="song">Song name</label>
+      <input type="text" id="song" name="song" /><br/>
+      <label for="duration">Song duration:</label>
+      <input type="text" id="duration" name="duration" /><br/>
+      <input type="submit" value="Submit form" />
+    </form>
+
+
+
+    </table>
+    <% if (it.duration && it.song) { %>
+    <table>
+      <tr>
+        <th>Song name</th>
+        <th>Duration (seconds)</th>
+      </tr>
+      <% it.addresses.forEach((entry) => { %>
+      <tr>
+      <td><%= entry.song %></td>
+        <td><%= entry.duration %></td>
+      </tr>  
+       <% }); %>
+    </table>
+     <% } %>
+  </body>
+</html>
+

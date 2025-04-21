@@ -1,0 +1,31 @@
+{
+  "scriptId": "314",
+  "url": "file:///Users/annashitikova/Documents/aalto/html18/task2/tests/services/helloService_test.js",
+  "functions": [
+    {
+      "functionName": "",
+      "ranges": [{ "startOffset": 0, "endOffset": 791, "count": 1 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "",
+      "ranges": [{ "startOffset": 261, "endOffset": 324, "count": 1 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "",
+      "ranges": [{ "startOffset": 388, "endOffset": 469, "count": 1 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "",
+      "ranges": [{ "startOffset": 542, "endOffset": 621, "count": 1 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "",
+      "ranges": [{ "startOffset": 694, "endOffset": 789, "count": 1 }],
+      "isBlockCoverage": true
+    }
+  ]
+}

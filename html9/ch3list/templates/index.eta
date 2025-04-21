@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello forms!</title>
+  </head>
+  <body>
+    <form method="POST" action="/songs">
+      <label for="name">Song name:</label>
+      <input type="text" id="name" name="name" /><br/>
+      <label for="address">Song duration:</label>
+      <input type="text" id="address" name="address" /><br/>
+      <input type="submit" value="Submit form" />
+    </form>
+    <% if (it && it.song) { %>
+    <p>Addresses:</p>
+    <table>
+      <tr>
+        <th>Song</th>
+        <th>Song duration</th>
+      </tr>
+      <% it.song.forEach((entry) => { %>
+      <tr>
+        <td><%= entry.name %></td>
+        <td><%= entry.address %></td>
+      </tr>
+      <% }); %>
+    </table>
+    <% } %>
+  </body>
+</html>

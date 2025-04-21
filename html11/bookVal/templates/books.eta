@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Books</title>
+  </head>
+  <body>
+  <%~ include("/partials/validation-errors.eta", { field: "Book", errors: it?.errors?.title?._errors }) %>
+  <%~ include("/partials/validation-errors.eta", { field: "ISBN", errors: it?.errors?.ISBN?._errors }) %>
+  <%~ include("/partials/validation-errors.eta", { field: "pages", errors: it?.errors?.pages?._errors }) %>
+  
+    <p>Add a book:</p>
+    <form method="POST" action="/books">
+      <label for="book">Book name:</label>
+      <input type="text" id="book" name="title" value="<%= it?.title ?? '' %>"  /><br/>
+      <label for="pages">Number of pages:</label>
+      <input type="text" id="pages" name="pages" value="<%= it?.pages ?? '' %>"/><br/>
+      <label for="ISBN">ISBN:</label>
+      <input type="text" id="ISBN" name="ISBN" value="<%= it?.ISBN ?? '' %>"/><br/>
+      <input type="submit" value="Add" />
+    </form>
+    <p>Existing books:</p>
+    <ul>
+    <% it.books.forEach((book) => { %>
+      <li>
+        <a href="/books/<%= book.id %>"><%= book.title %></a>
+        <form method="POST" action="/books/<%= book.id %>/delete">
+          <input type="submit" value="Delete" />
+        </form>
+      </li>
+    <% }); %>
+    </ul>
+  </body>
+</html>

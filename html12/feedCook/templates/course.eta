@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Book</title>
+  </head>
+  <body>
+      Course: <%= it.course.title %>
+      <%if (it.hascookie){%>
+      <p>"You have already given feedback for this course. Thank you!"</p>
+      <%} else {%>
+      <p>How would you rate this experience?</p>
+    <form method="POST" action="/courses/<%= it.course.id %>/feedbacks/1">
+      <input type="submit" value="Poor"></input>
+    </form>
+    <form method="POST" action="/courses/<%= it.course.id %>/feedbacks/2">
+      <input type="submit" value="Fair"></input>
+    </form>
+    <form method="POST" action="/courses/<%= it.course.id %>/feedbacks/3">
+      <input type="submit" value="Good"></input>
+    </form>
+    <form method="POST" action="/courses/<%= it.course.id %>/feedbacks/4">
+      <input type="submit" value="Very good"></input>
+    </form>
+    <form method="POST" action="/courses/<%= it.course.id %>/feedbacks/5">
+      <input type="submit" value="Excellent"></input>
+    </form>
+    <%}%>
+    <p><a href="/courses">Back to courses</a></p>
+      
+  </body>
+</html>

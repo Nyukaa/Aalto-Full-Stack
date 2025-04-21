@@ -1,0 +1,28 @@
+import { Hono } from "https://deno.land/x/hono@v3.12.11/mod.ts";
+import * as store from "./store.js";
+
+const app = new Hono();
+
+app.get("/", async (c) => {
+  if (c.req.query("store")) {
+    await store.setStore(c.req.query("store"));
+  }
+
+  return c.text(`Store: ${await store.getStore()}`);
+});
+
+export default app;
+
+const getStore = async () =>  {
+    const kv = await Deno.openKv();
+    const count = await kv.get(["store"]);
+    return count.value ?? "Nothing.";
+  };
+  
+  const setStore = async (s) => {
+    const kv = await Deno.openKv();
+    await kv.set(["store"], s);
+  };
+  
+  export { getStore, setStore };
+  

@@ -1,0 +1,27 @@
+{
+  "scriptId": "316",
+  "url": "file:///Users/annashitikova/Documents/aalto/html18/task2/services/helloService.js",
+  "functions": [
+    {
+      "functionName": "",
+      "ranges": [{ "startOffset": 0, "endOffset": 341, "count": 1 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "getHello",
+      "ranges": [{ "startOffset": 52, "endOffset": 79, "count": 4 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "setHello",
+      "ranges": [
+        { "startOffset": 99, "endOffset": 308, "count": 3 },
+        { "startOffset": 135, "endOffset": 161, "count": 2 },
+        { "startOffset": 163, "endOffset": 180, "count": 1 },
+        { "startOffset": 180, "endOffset": 306, "count": 2 },
+        { "startOffset": 214, "endOffset": 306, "count": 1 }
+      ],
+      "isBlockCoverage": true
+    }
+  ]
+}

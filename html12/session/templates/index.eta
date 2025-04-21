@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  
+    <title>Paywalled content</title>
+  </head>
+  <body>
+    <p><%= it %></p>
+  </body>
+</html>
