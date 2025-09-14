@@ -1,8 +1,50 @@
-# Todo API
+# 📌 Todo Management API
 
-This folder contains a simple Todo management API built with [Hono](https://hono.dev/) for Deno. It provides endpoints to create, list, update, and delete todos, with user authentication and PostgreSQL database storage.
+Welcome to the **Todo API**!  
+This project is a simple yet powerful **Todo management system** built with [Hono](https://hono.dev/) for Deno.  
+It includes **user authentication**, **PostgreSQL storage**, and a modular architecture with controllers, services, and middleware.
 
-## Structure
+---
+
+## 💡 Technologies
+
+- **Deno + Hono** → API framework
+- **PostgreSQL** → Database
+- **Flyway** → Migrations
+- **Eta** → Template engine
+- **Docker & Docker Compose** → Deployment
+
+---
+
+## 🚀 Features
+
+✅ **User Authentication**
+
+- Register, log in, and log out
+- Session-based user management
+
+✅ **Todo Management**
+
+- Add new todos
+- List user-specific todos
+- Update and delete todos
+
+✅ **Database Integration**
+
+- PostgreSQL for persistent storage
+- Schema migrations with **Flyway**
+
+✅ **HTML Views**
+
+- Rendered with Eta templates
+
+✅ **Docker Support**
+
+- Ready-to-use setup with Docker and Docker Compose
+
+---
+
+## 📂 Project Structure
 
 - `api/`
   - `app.js`: Main entry point for the API server
@@ -49,7 +91,19 @@ This folder contains a simple Todo management API built with [Hono](https://hono
 
 1. Copy or edit `project.env` with your database credentials.
 2. Run database migrations with Flyway.
-3. Start the API and database using Docker Compose:
-   ```sh
+
+```sh
+ flyway migrate
+```
+
+3. Run with Docker Compose:
+
+```
    docker-compose up --build
-   ```
+```
+
+4. Or run locally with Deno:
+
+```
+   deno run --allow-net --allow-env api/app-run.js
+```

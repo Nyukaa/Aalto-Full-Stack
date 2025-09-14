@@ -6,17 +6,15 @@ It allows you to **create, view, update, and delete books**, with data stored in
 
 ---
 
-💡 Technologies
+## 💡 Technologies
 
-Deno + Hono → API framework
+- **Deno + Hono** → API framework
+- **PostgreSQL** → Database
+- **Flyway** → Migrations
+- **Eta** → Template engine
+- **Docker & Docker Compose** → Deployment
 
-PostgreSQL → Database
-
-Flyway → Migrations
-
-Eta → HTML templates
-
-## Docker & Docker Compose → Deployment
+---
 
 ## 🚀 Features
 
@@ -44,6 +42,7 @@ Eta → HTML templates
 
 ## 📂 Project Structure
 
+```
 api/
 ├── app.js # API server entry point
 ├── app-run.js # Script to run the API
@@ -56,6 +55,7 @@ flyway/
 └── sql/ # Migration scripts
 docker-compose.yml # Docker Compose setup
 project.env # Environment variables
+```
 
 ---
 
@@ -72,11 +72,20 @@ project.env # Environment variables
 ## ⚡ Getting Started
 
 1. Set up the database with Flyway migrations:
-   ```sh
-   flyway migrate
-   ```
-2. Configure project.env with your database details.
+
+```sh
+ flyway migrate
+```
+
+2. Configure `project.env `with your database details.
 3. Run with Docker Compose:
+
+```
    docker-compose up --build
+```
+
 4. Or run locally with Deno:
+
+```
    deno run --allow-net --allow-env api/app-run.js
+```
